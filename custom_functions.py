@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 def avg(df, id_col, order_col, agg_col, lag):
     """In SQL : AVG() OVER (PARTITION BY ORDER BY)"""
     window = df.sort_values(by=[order_col], ascending=True)\
